@@ -1,0 +1,451 @@
+/*=============================
+        RESET
+==============================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    overflow-x:hidden;
+    overflow-y:auto;
+
+    background:linear-gradient(
+        135deg,
+        #f8f1ff,
+        #edd8ff,
+        #f7ecff
+    );
+
+    min-height:100vh;
+
+    color:#5B217B;
+
+    position:relative;
+
+}
+
+
+/*=============================
+        FONDO
+==============================*/
+
+.background{
+
+    position:fixed;
+    inset:0;
+
+    background:linear-gradient(
+        -45deg,
+        #F3E8FF,
+        #E9D5FF,
+        #FCE7F3,
+        #DDD6FE
+    );
+
+    background-size:400% 400%;
+
+    animation:bgMove 15s ease infinite;
+
+    z-index:-5;
+
+}
+
+
+@keyframes bgMove{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+
+/*=============================
+        MAIN
+==============================*/
+
+main{
+
+    width:100%;
+    height:100vh;
+
+}
+
+
+/*=============================
+        PANTALLAS
+==============================*/
+
+.screen{
+
+    display:none;
+
+    width:100%;
+    min-height:100vh;
+
+    padding:35px 25px;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    gap:20px;
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:
+    opacity .6s ease,
+    transform .6s ease;
+
+}
+
+.screen.active{
+
+    display:flex;
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/*=============================
+        TITULOS
+==============================*/
+
+h1{
+
+    font-size:2.5rem;
+
+    color:#7E22CE;
+
+}
+
+h2{
+
+    font-size:2rem;
+
+    color:#7E22CE;
+
+}
+
+h3{
+
+    color:#9333EA;
+
+    font-weight:600;
+
+}
+
+p{
+
+    line-height:1.7;
+
+    font-size:1rem;
+
+}
+
+
+/*=============================
+        IMAGENES
+==============================*/
+
+.hero-image{
+
+    width:250px;
+
+    max-width:90%;
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+
+.section-image{
+
+    width:280px;
+
+    max-width:90%;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+.couple-image{
+
+    width:280px;
+
+    max-width:90%;
+
+    border-radius:25px;
+
+    object-fit:cover;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.25);
+
+    border:5px solid white;
+
+}
+
+#giftBox{
+
+    width:180px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#giftBox:hover{
+
+    transform:scale(1.08);
+
+}
+
+
+/*=============================
+        BOTONES
+==============================*/
+
+button{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:15px 28px;
+
+    border-radius:40px;
+
+    background:#C084FC;
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    box-shadow:0 8px 25px rgba(192,132,252,.45);
+
+    transition:.25s;
+
+}
+
+
+button:hover{
+
+    transform:translateY(-4px);
+
+    background:#A855F7;
+
+}
+
+
+button:active{
+
+    transform:scale(.95);
+
+}
+
+
+/*=============================
+        TARJETA BONO
+==============================*/
+
+.voucher-card{
+
+    width:100%;
+
+    max-width:350px;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.45);
+
+    backdrop-filter:blur(14px);
+
+    border:2px solid rgba(255,255,255,.4);
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.15),
+
+    0 0 25px rgba(192,132,252,.35);
+
+    animation:glow 2s infinite alternate;
+
+}
+
+
+.voucher-title{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:20px;
+
+    background:#C084FC;
+
+    color:white;
+
+    margin-bottom:15px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+}
+
+
+.voucher-card h1{
+
+    font-size:2rem;
+
+    margin:20px 0;
+
+}
+
+
+/*=============================
+        ANIMACIONES
+==============================*/
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+
+@keyframes glow{
+
+    from{
+
+        box-shadow:
+
+        0 0 10px rgba(192,132,252,.3),
+
+        0 0 30px rgba(192,132,252,.2);
+
+    }
+
+    to{
+
+        box-shadow:
+
+        0 0 20px rgba(192,132,252,.8),
+
+        0 0 50px rgba(192,132,252,.5);
+
+    }
+
+}
+
+
+/*=============================
+    CORAZONES
+==============================*/
+
+.hearts-container,
+.stars-container{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+}
+
+
+/*=============================
+        CONFETI
+==============================*/
+
+#confetti{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+
+/*=============================
+        RESPONSIVE
+==============================*/
+
+@media(min-width:768px){
+
+    h1{
+
+        font-size:3.5rem;
+
+    }
+
+    h2{
+
+        font-size:2.8rem;
+
+    }
+
+    p{
+
+        width:70%;
+
+        font-size:1.1rem;
+
+    }
+
+    .voucher-card{
+
+        max-width:500px;
+
+    }
+
+}

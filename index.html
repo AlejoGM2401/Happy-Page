@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños 💜</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="shine-overlay"></div>
+    <audio id="bgMusic" loop hidden>
+        <source src="audio/bts.m4a" type="audio/mpeg">
+    </audio>
+
+    <!-- Fondo animado -->
+    <div class="background"></div>
+
+    <div id="particles"></div>
+
+    <!-- Corazones flotantes -->
+    <div class="hearts-container"></div>
+
+    <!-- Estrellas -->
+    <div class="stars-container"></div>
+
+    <main>
+        <div class="screens">
+
+        
+        <!-- ================================================ -->
+        <!-- PANTALLA 1 -->
+        <!-- ================================================ -->
+
+        <section id="welcome" class="screen active">
+
+            <!-- Imagen principal -->
+            <!-- images/bts-cover.png -->
+            <img src="images/bts-cover.png" alt="BTS" class="hero-image">
+
+            <h3>💜 Happy Birthday 💜</h3>
+
+            <h1>Mi Amorcito</h1>
+
+            <p>
+                Como te mereces lo mejor he preparado una sorpresa especialmente para ti...
+            </p>
+
+            <button id="startButton">
+                Tócame 💜
+            </button>
+
+        </section>
+
+        <!-- ================================================ -->
+        <!-- PANTALLA 2 -->
+        <!-- ================================================ -->
+
+        <section id="message" class="screen">
+
+            <h2>Para la Army más hermosa 💜</h2>
+
+            <p>
+                Sé cuánto significa BTS para ti,
+                cuánto has esperado este concierto
+                y la ilusión tan grande que tienes por vivir ese momento.
+            </p>
+
+            <p>
+                Por eso quería hacerte un regalo que te ayude a hacerlo aún más especial.
+            </p>
+
+            <!-- Imagen BTS -->
+            <!-- images/group-photo.png -->
+            <img src="images/group-photo.png" alt="BTS" class="section-image">
+
+            <button id="continueButton">
+                Tengo una sorpresa ✨
+            </button>
+
+        </section>
+
+        <!-- ================================================ -->
+        <!-- PANTALLA 3 -->
+        <!-- ================================================ -->
+
+        <section id="gift" class="screen">
+
+            <h2>🎁</h2>
+
+            <p>
+                Hay un regalo esperándote...
+            </p>
+
+            <!-- Caja de regalo -->
+            <!-- images/gift-box.png -->
+            <img
+                src="images/gift-box.png"
+                alt="Caja de regalo"
+                id="giftBox"
+                class="gift-box">
+
+            <p>
+                Toca el regalo
+            </p>
+
+        </section>
+
+        <!-- ================================================ -->
+        <!-- PANTALLA 4 -->
+        <!-- ================================================ -->
+
+        <section id="voucher" class="screen">
+
+            <div class="voucher-card">
+
+                <span class="voucher-title">
+                    BONO DE REGALO
+                </span>
+
+                <h2>
+                    💜 BTS OUTFIT 💜
+                </h2>
+
+                <p>
+                    Este bono es válido por
+                </p>
+
+                <h1>
+                    UNA PRENDA
+                </h1>
+
+                <p>
+                    para completar tu outfit del concierto de BTS.
+                </p>
+
+                <h3>
+                    Porque quiero verte brillar
+                    en uno de los días más felices de tu vida.
+                </h3>
+
+            </div>
+
+            <button id="finalButton">
+                Un último mensaje 💜
+            </button>
+
+        </section>
+
+        <!-- ================================================ -->
+        <!-- PANTALLA FINAL -->
+        <!-- ================================================ -->
+
+        <section id="final" class="screen">
+
+            <!-- Imagen de ustedes -->
+            <!-- images/us.png -->
+            <img src="images/us.jpg"
+                    alt="Nosotros"
+                    class="couple-image">
+
+            <h2>
+                Feliz cumpleaños 💜
+            </h2>
+
+            <p>
+                Gracias por hacer mi vida muchísimo más bonita.
+            </p>
+
+            <p>
+                Espero que disfrutes muchísimo este concierto,
+                cantes, llores, saltes y vivas cada segundo.
+            </p>
+
+            <p>
+                Te amo muchísimo ❤️
+            </p>
+
+            <button id="loveButton">
+                💜 Te amo 💜
+            </button>
+
+        </section>
+        </div>
+    </main>
+
+    <!-- Confeti -->
+    <div id="confetti"></div>
+
+    <div id="heartRain"></div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
